@@ -15,7 +15,7 @@ export default function App() {
       themePromptColor: "#EDEDED",
       errorColor: "#FFABAB",
       successColor: "#9EFF9E",
-      // linkColor: "#7DC0FF",
+      linkColor: "#7DC0FF",
     },
     // matrix: {
     //   themeBGColor: "#0D0208",
@@ -54,7 +54,7 @@ export default function App() {
     fontWeight: "regular",
   };
   const link = {
-    // color: themes[theme].linkColor,
+    color: themes[theme].linkColor,
     textDecoration: "underline",
     cursor: "pointer",
   };
@@ -206,6 +206,7 @@ export default function App() {
           }
           themes={themes}
           theme={theme}
+          link={link}
         />
       </div>
     </div>
