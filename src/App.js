@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 import { ReactTerminal } from "react-terminal";
 
+import "./styles.css";
+
 export default function App() {
   const [theme, setTheme] = useState("ana");
 
