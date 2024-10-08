@@ -5,10 +5,10 @@ import { ReactTerminal } from "react-terminal";
 import "./styles.css";
 
 export default function App() {
-  const [theme, setTheme] = useState("ana");
+  const [theme, setTheme] = useState("anademags");
 
   const themes = {
-    ana: {
+    anademags: {
       themeBGColor: "#09181A",
       themeToolbarColor: "#09181A",
       themeColor: "#EDEDED",
