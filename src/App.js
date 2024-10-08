@@ -5,17 +5,17 @@ import { ReactTerminal } from "react-terminal";
 import "./styles.css";
 
 export default function App() {
-  const [theme, setTheme] = useState("anademags");
+  const [theme, setTheme] = useState("ana");
 
   const themes = {
-    anademags: {
+    ana: {
       themeBGColor: "#09181A",
       themeToolbarColor: "#09181A",
       themeColor: "#EDEDED",
       themePromptColor: "#EDEDED",
       errorColor: "#FFABAB",
       successColor: "#9EFF9E",
-      linkColor: "#7DC0FF",
+      // linkColor: "#7DC0FF",
     },
     // matrix: {
     //   themeBGColor: "#0D0208",
@@ -54,7 +54,7 @@ export default function App() {
     fontWeight: "regular",
   };
   const link = {
-    color: themes[theme].linkColor,
+    // color: themes[theme].linkColor,
     textDecoration: "underline",
     cursor: "pointer",
   };
