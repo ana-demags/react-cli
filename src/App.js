@@ -55,6 +55,10 @@ export default function App() {
     cursor: "pointer",
   };
 
+  const ul = {
+    paddingLeft: "8px",
+  }
+
   // const success = {
   //   color: themes[theme].successColor,
   //   fontWeight: "regular",
@@ -94,10 +98,10 @@ export default function App() {
             <br></br>Howdy! I'm Ana, a San Francisco-based Product Designer with
             a background in Clinical Counseling and an affinity for developer
             tools, accessibility, and Developer Experience. These days, you can
-            find me at <a href="https://www.apollographql.com">ApolloGraphQL</a>
+            find me at <a style={link} href="https://www.apollographql.com">ApolloGraphQL</a>
             , where I work with several of our Engineering teams leading design
             spanning Apollo’s web app, CLI, and{" "}
-            <a href="https://www.apollographql.com">Odyssey</a>, our open-source
+            <a style={link} href="https://www.apollographql.com">Odyssey</a>, our open-source
             education platform.<br></br>
           </span>
         );
@@ -107,7 +111,7 @@ export default function App() {
     contact: (input) => {
       if (!input) {
         return (
-          <ul>
+          <ul style={ul}>
             <a style={link} href="https://read.cv/anademags" target="_blank">
               resume
             </a>{" "}
@@ -128,7 +132,7 @@ export default function App() {
       // this list total number of projects
       if (!input) {
         return (
-          <ul>
+          <ul style={ul}>
             📄{" "}
             <a style={link} href="link.com" target="_blank">schema-proposals.txt</a>
             {" "}
