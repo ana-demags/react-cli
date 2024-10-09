@@ -2,8 +2,6 @@ import React, { useState } from "react";
 
 import { ReactTerminal } from "react-terminal";
 
-import "./styles.css";
-
 export default function App() {
   const [theme, setTheme] = useState("ana");
 
@@ -13,59 +11,62 @@ export default function App() {
       themeToolbarColor: "#09181A",
       themeColor: "#EDEDED",
       themePromptColor: "#EDEDED",
+      // these styles below, unlike the 4 above it for the theme, are defined inline
       errorColor: "#FFABAB",
       successColor: "#9EFF9E",
       linkColor: "#7DC0FF",
     },
-    // matrix: {
-    //   themeBGColor: "#0D0208",
-    //   themeToolbarColor: "#0D0208",
-    //   themeColor: "#00FF41",
-    //   themePromptColor: "#008F11",
-    //   errorColor: "#008F11",
-    //   successColor: "#008F11",
-    //   linkColor: "#00FF41",
-    //},
-    // ocean: {
-    //   themeBGColor: "#224fbc",
-    //   themeToolbarColor: "#216dff",
-    //   themeColor: "#e5e5e5",
-    //   themePromptColor: "#00e5e5",
-    //   errorColor: "#e5e500",
-    //   linkColor: "#e5e5e5",
-    // },
-    // test: {
-    //   themeBGColor: "#fdf6e4",
-    //   themeToolbarColor: "#d8d8d8",
-    //   themeColor: "#333",
-    //   themePromptColor: "#4495D4",
-    //   errorColor: "#FF443E",
-    //   successColor: "#5B9E47",
-    //   linkColor: "#4495D4",
-    // },
+        // matrix: {
+      //   themeBGColor: "#0D0208",
+      //   themeToolbarColor: "#0D0208",
+      //   themeColor: "#00FF41",
+      //   themePromptColor: "#008F11",
+      //   errorColor: "#008F11",
+      //   successColor: "#008F11",
+      //   linkColor: "#00FF41",
+      //},
+      // ocean: {
+      //   themeBGColor: "#224fbc",
+      //   themeToolbarColor: "#216dff",
+      //   themeColor: "#e5e5e5",
+      //   themePromptColor: "#00e5e5",
+      //   errorColor: "#e5e500",
+      //   linkColor: "#e5e5e5",
+      // },
+      // test: {
+      //   themeBGColor: "#fdf6e4",
+      //   themeToolbarColor: "#d8d8d8",
+      //   themeColor: "#333",
+      //   themePromptColor: "#4495D4",
+      //   errorColor: "#FF443E",
+      //   successColor: "#5B9E47",
+      //   linkColor: "#4495D4",
+      // },
   };
-
+  
   const error = {
     color: themes[theme].errorColor,
     fontWeight: "regular",
   };
-  const success = {
-    color: themes[theme].successColor,
-    fontWeight: "regular",
-  };
-  const link = {
+
+  const link = { // we need this to pass link style inline (e.g. <a style={link}</a>)
     color: themes[theme].linkColor,
     textDecoration: "underline",
     cursor: "pointer",
   };
 
-  const indent1 = { marginLeft: 16 };
-  const indent2 = { marginLeft: 32 };
+  // const success = {
+  //   color: themes[theme].successColor,
+  //   fontWeight: "regular",
+  // };
 
-  const minMessageLength = 10;
-  const maxMessageLength = 1500;
-  const minFromLength = 2;
-  const maxFromLength = 25;
+  // const indent1 = { marginLeft: 16 };
+  // const indent2 = { marginLeft: 32 };
+
+  // const minMessageLength = 10;
+  // const maxMessageLength = 1500;
+  // const minFromLength = 2;
+  // const maxFromLength = 25;
 
   const isMobile = window.matchMedia("(max-width: 550px)").matches;
 
@@ -107,18 +108,15 @@ export default function App() {
       if (!input) {
         return (
           <ul>
-            <a href="https://read.cv/anademags" target="_blank">
+            <a style={link} href="https://read.cv/anademags" target="_blank">
               resume
             </a>{" "}
             <br></br>
-            <a
-              href="https://www.linkedin.com/in/anademagalhaes/"
-              target="_blank"
-            >
+            <a style={link} href="https://www.linkedin.com/in/anademagalhaes/" target="_blank">
               linkedin
             </a>
             <br></br>
-            <a href="mailto:anademags@gmail.com" target="_blank">
+            <a style={link} href="mailto:anademags@gmail.com" target="_blank">
               email
             </a>
           </ul>
@@ -132,19 +130,14 @@ export default function App() {
         return (
           <ul>
             📄{" "}
-            <a href="link.com" target="_blank">
-              schema-proposals.txt
-            </a>{" "}
+            <a style={link} href="link.com" target="_blank">schema-proposals.txt</a>
+            {" "}
             <br></br>
             📄{" "}
-            <a href="link.com" target="_blank">
-              graph-visualization.txt
-            </a>
+            <a  style={link} href="link.com" target="_blank">graph-visualization.txt</a>
             <br></br>
             📄{" "}
-            <a href="link.com" target="_blank">
-              graphos-onboarding.txt
-            </a>
+            <a  style={link} href="link.com" target="_blank">graphos-onboarding.txt</a>
           </ul>
         );
       }
@@ -196,14 +189,14 @@ export default function App() {
         <ReactTerminal
           commands={commands}
           prompt="$"
+          themes={themes}
+          theme={theme}
           welcomeMessage={welcomeMessage}
           errorMessage={
             <span style={error}>
               Command not found. Run `help` for a list of available commands.
             </span>
           }
-          themes={themes}
-          theme={theme}
         />
       </div>
     </div>
