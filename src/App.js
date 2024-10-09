@@ -153,7 +153,7 @@ export default function App() {
           <span>
             <br></br>
             Available commands:
-            <ul>
+            <ul style={ul}>
               <span>👋🏽 intro: tells you a bit about me ◡̈</span>
               <br></br>
               <span>📁 work: lists available projects</span>
