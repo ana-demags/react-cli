@@ -78,15 +78,13 @@ export default function App() {
     </span>
   );
 
-  function validateMessage(input) {
-    const cleanedMessage = input
-      .replace(/^['"`]|^\[/, "")
-      .replace(/['"`]$|\]$/, "");
-  }
+  // function validateMessage(input) {
+  //   const cleanedMessage = input
+  //     .replace(/^['"`]|^\[/, "")
+  //     .replace(/['"`]$|\]$/, "");
+  // }
 
   const commands = {
-
-
     intro: (input) => {
       // this introduces bio
       if (!input) {
@@ -177,7 +175,7 @@ export default function App() {
 
   return (
     <div
-      className="text-class"
+      className="text-class" // "text-class" applies the styles in styles.css to the terminal window
       style={{
         display: "flex",
         justifyContent: "center",
@@ -186,7 +184,8 @@ export default function App() {
         backgroundColor: "#EDEDED",
       }}
     >
-      <div
+      <div // these properties control the size of the terminal window
+      className="text-class"
         style={{
           height: 560,
           maxHeight: "100vh",
@@ -196,6 +195,7 @@ export default function App() {
         }}
       >
         <ReactTerminal
+          className="text-class"
           commands={commands}
           prompt="$"
           welcomeMessage={welcomeMessage}
@@ -206,7 +206,6 @@ export default function App() {
           }
           themes={themes}
           theme={theme}
-          link={link}
         />
       </div>
     </div>
