@@ -59,8 +59,8 @@ export default function App() {
   //   fontWeight: "regular",
   // };
 
-  const indent1 = { marginLeft: 16 };
-  const indent2 = { marginLeft: 32 };
+  // const indent1 = { marginLeft: 16 };
+  // const indent2 = { marginLeft: 32 };
 
   // const minMessageLength = 10;
   // const maxMessageLength = 1500;
