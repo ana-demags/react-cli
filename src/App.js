@@ -76,7 +76,7 @@ export default function App() {
 
   const welcomeMessage = (
     <span>
-      Welcome! Type and run `tips` (without the backticks) for a list of ways to
+      Welcome! Type and run `help` (without the backticks) for a list of ways to
       get started.
       <br />
       <br />
@@ -147,7 +147,7 @@ export default function App() {
       }
     },
 
-    tips: (input) => {
+    help: (input) => {
       if (!input) {
         return (
           <span>
