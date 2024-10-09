@@ -206,7 +206,6 @@ export default function App() {
           }
           themes={themes}
           theme={theme}
-          link={link}
         />
       </div>
     </div>
