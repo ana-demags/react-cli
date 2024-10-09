@@ -11,6 +11,7 @@ export default function App() {
       themeToolbarColor: "#09181A",
       themeColor: "#EDEDED",
       themePromptColor: "#EDEDED",
+      // these styles below, unlike the 4 above it for the theme, are defined inline
       errorColor: "#FFABAB",
       successColor: "#9EFF9E",
       linkColor: "#7DC0FF",
@@ -48,11 +49,11 @@ export default function App() {
     fontWeight: "regular",
   };
 
-  // const link = {
-  //   color: themes[theme].linkColor,
-  //   textDecoration: "underline",
-  //   cursor: "pointer",
-  // };
+  const link = { // we need this to pass link style inline (e.g. <a style={link}</a>)
+    color: themes[theme].linkColor,
+    textDecoration: "underline",
+    cursor: "pointer",
+  };
 
   // const success = {
   //   color: themes[theme].successColor,
@@ -107,18 +108,15 @@ export default function App() {
       if (!input) {
         return (
           <ul>
-            <a href="https://read.cv/anademags" target="_blank">
+            <a style={link} href="https://read.cv/anademags" target="_blank">
               resume
             </a>{" "}
             <br></br>
-            <a
-              href="https://www.linkedin.com/in/anademagalhaes/"
-              target="_blank"
-            >
+            <a style={link} href="https://www.linkedin.com/in/anademagalhaes/" target="_blank">
               linkedin
             </a>
             <br></br>
-            <a href="mailto:anademags@gmail.com" target="_blank">
+            <a style={link} href="mailto:anademags@gmail.com" target="_blank">
               email
             </a>
           </ul>
@@ -132,19 +130,14 @@ export default function App() {
         return (
           <ul>
             📄{" "}
-            <a href="link.com" target="_blank">
-              schema-proposals.txt
-            </a>{" "}
+            <a style={link} href="link.com" target="_blank">schema-proposals.txt</a>
+            {" "}
             <br></br>
             📄{" "}
-            <a href="link.com" target="_blank">
-              graph-visualization.txt
-            </a>
+            <a  style={link} href="link.com" target="_blank">graph-visualization.txt</a>
             <br></br>
             📄{" "}
-            <a href="link.com" target="_blank">
-              graphos-onboarding.txt
-            </a>
+            <a  style={link} href="link.com" target="_blank">graphos-onboarding.txt</a>
           </ul>
         );
       }
