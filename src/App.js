@@ -185,7 +185,6 @@ export default function App() {
       }}
     >
       <div // these properties control the size of the terminal window
-      className="text-class"
         style={{
           height: 560,
           maxHeight: "100vh",
@@ -195,7 +194,6 @@ export default function App() {
         }}
       >
         <ReactTerminal
-          className="text-class"
           commands={commands}
           prompt="$"
           welcomeMessage={welcomeMessage}
