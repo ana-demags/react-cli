@@ -2,7 +2,9 @@ import React, { useState } from "react";
 
 import { ReactTerminal } from "react-terminal";
 
+
 export default function App() {
+
   const [theme, setTheme] = useState("ana");
 
   const themes = {
@@ -172,24 +174,19 @@ export default function App() {
 
   return (
     <div
-      className="text-class" // "text-class" applies the styles in styles.css to the terminal window
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-        backgroundColor: "#EDEDED",
-      }}
-    >
-      <div // these properties control the size of the terminal window
-        style={{
-          height: 560,
-          maxHeight: "100vh",
-          width: 800,
-          maxWidth: "100vw",
-          padding: "24px",
-        }}
-      >
+      className="page-wrapper">
+{/* "text-class" applies the styles in styles.css to the terminal window */}
+      <div
+      className="page-title">
+        <h1>ana de magalhães</h1>
+      </div>
+      
+      <div className="terminal-wrapper"> 
+        {/* // these properties control the size of the terminal window */}
+
+<div>
+  
+</div>
         <ReactTerminal
           commands={commands}
           prompt="$"
