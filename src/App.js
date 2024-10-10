@@ -55,7 +55,6 @@ export default function App() {
     color: themes[theme].linkColor,
     textDecoration: "underline",
     cursor: "pointer",
-    tabIndex: "0",
   };
 
   const ul = {
@@ -115,15 +114,15 @@ export default function App() {
       if (!input) {
         return (
           <ul style={ul}>
-            <a style={link} href="https://read.cv/anademags" target="_blank" tabindex="0">
+            <a style={link} href="https://read.cv/anademags" target="_blank">
               resume
             </a>{" "}
             <br></br>
-            <a style={link} href="https://www.linkedin.com/in/anademagalhaes/" target="_blank" tabindex="0">
+            <a style={link} href="https://www.linkedin.com/in/anademagalhaes/" target="_blank">
               linkedin
             </a>
             <br></br>
-            <a style={link} href="mailto:anademags@gmail.com" target="_blank" tabindex="0">
+            <a style={link} href="mailto:anademags@gmail.com" target="_blank">
               email
             </a>
           </ul>
@@ -185,6 +184,9 @@ export default function App() {
       <div className="terminal-wrapper"> 
         {/* // these properties control the size of the terminal window */}
 
+<div>
+  
+</div>
         <ReactTerminal
           commands={commands}
           prompt="$"
