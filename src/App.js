@@ -147,8 +147,10 @@ export default function App() {
             📄{" "}
             <a  style={link} href="link.com" target="_blank">graphos-onboarding.txt</a>
             <br></br>
+            📄{" "}
             <a  style={link} href="link.com" target="_blank">orbit-design-system-and-brand-refresh.txt</a>
             <br></br>
+            📄{" "}
             <a  style={link} href="link.com" target="_blank">odyssey-certifications.txt</a>
           </ul>
         );
