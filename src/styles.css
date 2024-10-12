@@ -48,12 +48,22 @@
 .page-title h1 {
   font-family: "Bricolage Grotesque";
   color: #EDEDED;
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 200;
   line-height: 100%;
   letter-spacing: -0.04rem;
   margin: 1rem 0 0;
+  padding: 0 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
+
+@media only screen and (min-width: 600px) {
+  .page-title h1 {
+    font-size: 5rem;
+  }
+}
+
+
