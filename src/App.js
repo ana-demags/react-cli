@@ -2,7 +2,9 @@ import React, { useState } from "react";
 
 import { ReactTerminal } from "react-terminal";
 
+
 export default function App() {
+
   const [theme, setTheme] = useState("ana");
 
   const themes = {
@@ -89,6 +91,8 @@ export default function App() {
   //     .replace(/['"`]$|\]$/, "");
   // }
 
+  
+
   const commands = {
     intro: (input) => {
       // this introduces bio
@@ -99,9 +103,9 @@ export default function App() {
             a background in Clinical Counseling and an affinity for developer
             tools, accessibility, and Developer Experience. These days, you can
             find me at <a style={link} href="https://www.apollographql.com">ApolloGraphQL</a>
-            , where I work with several of our Engineering teams leading design
-            spanning Apollo’s web app, CLI, and{" "}
-            <a style={link} href="https://www.apollographql.com">Odyssey</a>, our open-source
+            , where I work with a few different teams leading design
+            for projects that span Apollo’s web app, command-line interface, and{" "}
+            <a style={link} href="https://www.apollographql.com">Odyssey</a>, our developer
             education platform.<br></br>
           </span>
         );
@@ -142,6 +146,12 @@ export default function App() {
             <br></br>
             📄{" "}
             <a  style={link} href="link.com" target="_blank">graphos-onboarding.txt</a>
+            <br></br>
+            📄{" "}
+            <a  style={link} href="link.com" target="_blank">orbit-design-system-and-brand-refresh.txt</a>
+            <br></br>
+            📄{" "}
+            <a  style={link} href="link.com" target="_blank">odyssey-certifications.txt</a>
           </ul>
         );
       }
@@ -159,7 +169,7 @@ export default function App() {
               <span>📁 work: lists available projects</span>
               <br></br>
               <span>
-                📨 contact: lists quick links to resume, email, and linkedin
+                📨 contact: lists social links 
               </span>
               <br></br>
               <span>🧽 clear: tidies up your terminal window</span>
@@ -172,24 +182,19 @@ export default function App() {
 
   return (
     <div
-      className="text-class" // "text-class" applies the styles in styles.css to the terminal window
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-        backgroundColor: "#EDEDED",
-      }}
-    >
-      <div // these properties control the size of the terminal window
-        style={{
-          height: 560,
-          maxHeight: "100vh",
-          width: 800,
-          maxWidth: "100vw",
-          padding: "24px",
-        }}
-      >
+      className="page-wrapper">
+{/* "text-class" applies the styles in styles.css to the terminal window */}
+      <div
+      className="page-title">
+        <h1>ana de magalhães</h1>
+      </div>
+      
+      <div className="terminal-wrapper"> 
+        {/* // these properties control the size of the terminal window */}
+
+<div>
+  
+</div>
         <ReactTerminal
           commands={commands}
           prompt="$"
